@@ -27,13 +27,13 @@ const Cart = () => {
                 <button
                   onClick={() => {
                     dispatch({
-                      type: "removeOne",
+                      type: "updateCart",
                       payload: {
                         id: product.id,
                         name: product.name,
                         price: product.price,
                         imgSrc: product.imgSrc,
-                        count: 1,
+                        count: -1,
                       },
                     });
                     dispatch({ type: "getTotal" });
@@ -44,7 +44,7 @@ const Cart = () => {
                 <button
                   onClick={() => {
                     dispatch({
-                      type: "addToCart",
+                      type: "updateCart",
                       payload: {
                         id: product.id,
                         name: product.name,

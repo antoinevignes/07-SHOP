@@ -23,7 +23,7 @@ const Products = () => {
             <button
               onClick={() => {
                 dispatch({
-                  type: "addToCart",
+                  type: "updateCart",
                   payload: {
                     id: product.id,
                     name: product.name,
